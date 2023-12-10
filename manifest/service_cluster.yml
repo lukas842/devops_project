@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rambo-cluster
+spec:
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      targetPort: 80
+      port: 80

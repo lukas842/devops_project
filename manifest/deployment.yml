@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rambo-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rambo
+  template:
+    metadata:
+      labels:
+        app: rambo
+    spec:
+      containers:
+      - name: rambo-app
+        image: bletvaska/rambo:4
+        ports:
+        - containerPort: 80
